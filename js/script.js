@@ -30,3 +30,8 @@ function reload() {
 }
 
 print(html);
+
+
+//Github:
+$ cat .gitattributes
+  *.rb linguist-language=JavaScript
