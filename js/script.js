@@ -17,16 +17,20 @@ function randomColor() {
 }
 
 function print(message) {
- document.write(message);
+ document.getElementById('output').innerHTML = (message);
 }
 
+function build() {
 for (var i = 0; i < 10; i += 1) {
   rgbColor = randomColor();
   html += '<div style="background-color:' + rgbColor + '"></div>';
 }
-
-function reload() {
-  return window.location.reload();
 }
 
+function reload() {
+  html = '';
+  build();
+  print(html);
+}
+build();
 print(html);
